@@ -18,7 +18,7 @@
       <tr>
         <td><%= photo.title %></td>
         <td><%= photo.description %></td>
-        <td><%= photo.file_location %></td>
+        <td><%= image_tag photo.file_location.url, style: "width: 100px;" %></td>
         <td><%= photo.date %></td>
         <td><%= link_to 'Show', photo %></td>
         <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
