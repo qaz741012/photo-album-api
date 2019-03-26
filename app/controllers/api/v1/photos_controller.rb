@@ -1,4 +1,5 @@
 class Api::V1::PhotosController < ApiController
+  before_action :authenticate_user!, only: [:show, :create, :update, :destroy]
 
   def index
     @photos = Photo.all
