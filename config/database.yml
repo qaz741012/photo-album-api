@@ -82,6 +82,6 @@ development:
 #
 production:
   <<: *default
-  database: photo-album-api_production
-  username: photo-album-api
-  password: <%= ENV['PHOTO-ALBUM-API_DATABASE_PASSWORD'] %>
+  database: <%= Rails.application.credentials.production[:database][:database] %>
+  username: <%= Rails.application.credentials.production[:database][:username] %>
+  password: <%= Rails.application.credentials.production[:database][:password] %>
